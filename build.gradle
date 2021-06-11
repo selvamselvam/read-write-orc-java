@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    // https://mvnrepository.com/artifact/org.apache.orc/orc-core
+    implementation group: 'org.apache.orc', name: 'orc-core', version: '1.6.8'
+
+    // https://mvnrepository.com/artifact/org.apache.orc/orc-tools
+    implementation group: 'org.apache.orc', name: 'orc-tools', version: '1.6.8'
+
+    // https://mvnrepository.com/artifact/org.apache.orc/orc-mapreduce
+    implementation group: 'org.apache.orc', name: 'orc-mapreduce', version: '1.6.8'
+
+    // https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-common
+    implementation group: 'org.apache.hadoop', name: 'hadoop-common', version: '3.3.0'
+
+    // https://mvnrepository.com/artifact/com.google.guava/guava
+    implementation group: 'com.google.guava', name: 'guava', version: '30.1.1-jre'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
